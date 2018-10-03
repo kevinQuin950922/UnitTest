@@ -2,7 +2,7 @@
 
 Este es un arquetipo base que sirve como laboratorio para realizar pruebas unitarias.
 
-Se debe instalar en el IDE donde se trabje el pugin de lombok.
+Se debe instalar en el IDE donde se trabaje el pugin de lombok.
 
 El comando utilizado para correr la aplicacion es gradle bootRun.
 
