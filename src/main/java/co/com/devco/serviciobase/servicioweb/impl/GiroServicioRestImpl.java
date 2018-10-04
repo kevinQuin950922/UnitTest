@@ -10,7 +10,6 @@ import co.com.devco.serviciobase.servicio.GiroServicio;
 import co.com.devco.serviciobase.servicioweb.GiroServicioRest;
 import co.com.devco.serviciobase.servicioweb.mapeador.GiroServicioRestMapeador;
 import co.com.devco.serviciobase.servicioweb.recurso.TransaccionRecurso;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -30,10 +29,8 @@ public class GiroServicioRestImpl implements GiroServicioRest {
         Transaccion transaccion = giroServicio.consultarGiro(idTransaccion, fechaInicio, fechaFin);
 
         if (transaccion != null) {
-            ObjectMapper mapper = new ObjectMapper();
             TransaccionRecurso transaccionRecurso = convertirARecurso.apply(transaccion);
-            String jsonInString = mapper.writeValueAsString(transaccionRecurso);
-            return Response.status(CREATED).entity(jsonInString).build();
+            return Response.status(CREATED).entity(transaccionRecurso).build();
         } else {
             throw new Exception("No fue posible obtener el recurso");
         }

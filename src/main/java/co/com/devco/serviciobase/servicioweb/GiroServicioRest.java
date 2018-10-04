@@ -26,7 +26,6 @@ public interface GiroServicioRest {
 
     @GET
     @Path("/consultar/giro")
-    @Produces({"application/json"})
     @Operation(summary = "", description = "", responses = {
             @ApiResponse(content = @Content(schema = @Schema(implementation = TransaccionRecurso.class)), responseCode = "201", description = "Respuesta exitosa", headers = {
                     @Header(name = HttpHeaders.CONTENT_TYPE, description = "", schema = @Schema(implementation = String.class)),
