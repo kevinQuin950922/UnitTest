@@ -4,11 +4,9 @@ import co.com.devco.serviciobase.modelo.Persona;
 import co.com.devco.serviciobase.modelo.TipoEstado;
 import io.swagger.v3.oas.annotations.media.Schema;
 
-import javax.xml.bind.annotation.XmlRootElement;
 
 
 @Schema(description = "TransaccionRecurso")
-@XmlRootElement
 public class TransaccionRecurso {
 
     private Persona remitente;
