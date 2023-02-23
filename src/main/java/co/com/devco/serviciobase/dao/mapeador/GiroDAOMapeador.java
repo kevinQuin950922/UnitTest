@@ -13,7 +13,7 @@ public final class GiroDAOMapeador {
     }
 
     public static Transaccion mapear(TransaccionExterna transaccionExterna) {
-        return ofNullable(transaccionExterna).map(x -> {
+        return ofNullable(transaccionExterna).map( x -> {
             return Transaccion
                     .builder()
                     .ubicacionOrigen(mapear(x.getUbicacionOrigen()))

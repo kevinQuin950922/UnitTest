@@ -31,7 +31,8 @@ dependencies {
 	implementation 'org.apache.cxf:cxf-spring-boot-starter-jaxrs:4.0.0'
 	implementation 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'junit:junit:4.13.1'
-	compileOnly('org.projectlombok:lombok')
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    compileOnly('org.projectlombok:lombok')
 	implementation 'io.swagger.core.v3:swagger-jaxrs2:2.2.8'
 	implementation 'org.apache.cxf:cxf-rt-rs-extension-providers:4.0.0'
 	implementation 'org.codehaus.jettison:jettison:1.5.3'
