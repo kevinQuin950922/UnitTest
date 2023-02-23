@@ -17,13 +17,26 @@ Para esta parte práctica se va a realizar pruebas sobre la clase GiroServicioIm
 
 Se crea los paquetes servicio.impl en la ruta src/test/java/co.com.devco.serviciobase
 Se crea la clase con el nombre GiroServicioImplTest
+
+Primero importamos las dependecias necesarias para realizar las pruebas
+```jsx
+import co.com.devco.serviciobase.fachada.GiroFachada;
+import co.com.devco.serviciobase.modelo.Transaccion;
+import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+
+import org.mockito.MockitoAnnotations;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
+import static org.mockito.Mockito.*;
+``
 Dentro de la clase se inicializa los mocks que vayamos a usar, por tanto se agrega
 ```jsx
 @BeforeEach
 public void setUp() {
    MockitoAnnotations.initMocks(this);
 }
-
 ```
 Se define el primer método de prueba. En este caso se va a probar el método “consultarGiro”
 ```jsx
