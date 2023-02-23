@@ -2,7 +2,6 @@
 
 ## Introducción
 
-
 El objetivo de este proyecto es afianzar los conocimientos adquiridos en la presentación teórica de pruebas unitarias
 
 ## 1. Clonar proyecto
