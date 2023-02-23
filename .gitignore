@@ -34,3 +34,5 @@ gradle/
 build/
 
 out/
+
+.vscode/
