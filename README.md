@@ -61,6 +61,7 @@ Transaccion transaccionCapture = giroServicio.consultarGiro(idTransaccionTest, f
 ```
 Validamos que las respuesta sean las que estamos esperando
 ```jsx
+//assert
 verify(giroFachada).consultarGiro();
 assertEquals(transaccionmock,transaccionCapture);
 ```
