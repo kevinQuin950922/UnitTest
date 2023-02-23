@@ -79,7 +79,28 @@ public void testValidarIdTransaccionCuandoElIdtransaccionIngresaVacioEntoncesSeD
    // assert
    assertEquals(mensajeCapturado,mensajeEsperado);
 }
-
 ```
+## 3. Configuración Jacoco
 
+Para poder visualizar la cobertura de código se debe configurar el archivo build.gradle agregando las siguientes líneas.
+```jsx
+apply plugin: 'jacoco'
 
+jacoco {
+	toolVersion = "0.8.5" //jacoco version
+	reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
+}
+
+test {
+	finalizedBy jacocoTestReport // report is always generated after tests run
+}
+jacocoTestReport {
+	dependsOn test // tests are required to run before generating the report
+	reports {
+		xml.required = false
+		csv.required = false
+		html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
+	}
+}
+```
+Se vuelve a contruir el proyecto y se ejecutan las pruebas
